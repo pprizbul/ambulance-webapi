@@ -35,6 +35,9 @@ case "$command" in
     "mongo")
         mongo up
         ;;
+    "docker")
+        docker build -t pprizbul/ambulance-wl-webapi:local-build -f ${ProjectRoot}/build/docker/Dockerfile .
+        ;;
     *)
         echo "Unknown command: $command" >&2
         exit 1

@@ -43,6 +43,7 @@ func main() {
 		ctx.Set("db_service", dbService)
 		ctx.Next()
 	})
+	log.Printf("Database setted up")
 	// request routings
 
 	handleFunctions := &ambulance_wl.ApiHandleFunctions{
